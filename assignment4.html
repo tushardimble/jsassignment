@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>String To array</title>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+      <label>Please Enter String </label>
+      <input type="text" name="getstring" id="getstring">
+      <button onclick="convert()" >Convert</button>
+    <script>
+      function convert(){
+          let enteredText = document.getElementById("getstring").value;
+          let convertedArray = enteredText.split(" ");
+          console.log(convertedArray);
+
+          for(var i=0;i<convertedArray.length;i++){
+            alert(convertedArray[i]);
+          }
+          
+      }
+    </script>
+  </body>
+</html>
+

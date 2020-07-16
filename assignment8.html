@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Largest String</title>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+      <label>Please Enter String </label>
+      <input type="text" name="getstring" id="getstring">
+      <button onclick="getReverseNumber()" >Get</button>
+    <script>
+        function getReverseNumber(){
+            // alert();
+            let givenString = document.getElementById("getstring").value;
+            var myArray = givenString.split(" ");
+            var tempWord = '';
+            
+            for (var i = 0; i < myArray.length; i++){
+                if (myArray[i].length > tempWord.length){
+                    tempWord = myArray[i];
+                }
+                
+            }
+            alert(tempWord);
+        }
+        
+    </script>
+  </body>
+</html>
+

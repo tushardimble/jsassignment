@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Reverse Number</title>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+      <label>Please Enter Number </label>
+      <input type="text" name="getnumber" id="getnumber">
+      <p id="demo"></p>
+      <button onclick="getReverseNumber()" >Check</button>
+    <script>
+        function getReverseNumber(){
+            let givenNumber = document.getElementById("getnumber").value;
+            reverse = givenNumber.split('');
+            var text = "";
+            var i;
+            for(i=reverse.length-1;i>=0;i--){
+                text += reverse[i];
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        
+    </script>
+  </body>
+</html>
+
