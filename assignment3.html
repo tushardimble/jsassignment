@@ -13,9 +13,8 @@
           <th>Status</th>
         </tr>
     </table>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        var library = [
+        let library = [
             {
                 author: 'Bill Gates',
                 title: 'The Road Ahead',
@@ -32,17 +31,16 @@
                 readingStatus: false
             }
         ];
-        var status = '';
-        var text = "<tr><th>Title</th><th>Author</th><th>Status</th>";
-        var i;
-        for (var x in library){
+        let status = '';
+        let text = "<tr><th>Title</th><th>Author</th><th>Status</th>";
+        let i;
+        for (let x in library){
             if(library[x]['readingStatus'] == true){
                 status = "Read";
             }else{
                 status = "Not Read";
             }
-            //text += "<p id="+x+"><b>Title of Book:</b>"+library[x]['title']+"<b>,Author is:</b>"+library[x]['author']+",<b> Reading Status:</b>"+status+"</p>";
-
+            
             text += "</tr><tr><td>"+library[x]['title']+"</td><td>"+library[x]['author']+"</td><td>"+status+"</td>";
         }
         //console.log(text);
