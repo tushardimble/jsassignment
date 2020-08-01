@@ -4,19 +4,17 @@
       <title>Window Size</title>
       <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body onload="windowSize()" onresize="windowSize()">
     <div id="windowsize">
+        <p id="demo"></p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        
-        $('#windowsize').text('Browser (Width : '
-                + $(window).width() + ' , Height :' + $(window).height() + ' )');
-
-        $(window).resize(function () {
-		$('#windowsize').text('Browser (Width : ' + $(window).width()
-                                 + ' , Height :' + $(window).height() + ' )');
-    });
+      function windowSize(){
+        let winWidth = document.documentElement.clientWidth;
+        var winHeight = document.documentElement.clientHeight;
+        document.getElementById('demo').innerHTML = "Width= "+ winWidth + "and Height= " + winHeight;
+      }
     </script>
   </body>
 </html>
